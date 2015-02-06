@@ -1,0 +1,16 @@
+  <apex:page standardController="account" tabStyle="account" extensions="accsearchcontroller">  
+  <apex:form >  
+ <apex:inputText value="{!searchstring}" label="Input"/>   
+  <apex:commandButton value="Search records" action="{!search}"/>  
+   
+   <apex:pageBlock title="Company Names"> 
+ 
+    <apex:pageblockTable value="{!acc}" var="a">  
+     <apex:column >  
+      <apex:outputlink value="https://ap1.salesforce.com/apex/dev_addcontact">{!a.Name}</apex:outputlink>  
+     </apex:column>  
+      
+    </apex:pageBlockTable>     
+   </apex:pageBlock>   
+  </apex:form> 
+  </apex:page> 
